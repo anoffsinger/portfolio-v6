@@ -1,15 +1,12 @@
-/* :root {
-	--grey400: #858585;
-	--white: #ffffff;
-	--grey100: #131313;
-	--grey500: #cacaca;
-	--greyDark: #5F5F5F;
-} */
+@font-face {
+  font-family: "ReplicaMonoLLWeb-Regular";
+  src: url("fonts/ReplicaMonoLLWeb-Regular.woff") format("woff");
+}
 
 @font-face {
-	font-family: "ReplicaMonoLLTrialWeb-Regular";
-	src: url("fonts/ReplicaMonoLLTrialWeb-Regular.woff2") format("woff2");
-  }
+  font-family: "ReplicaMonoLLWeb-Regular";
+  src: url("fonts/ReplicaMonoLLWeb-Regular.woff2") format("woff2");
+}
 
 :root {
 	--color-bg: #000000;
@@ -25,11 +22,10 @@
 	}
   }
 
-
-
 * {
     margin: 0;
     padding: 0;
+	box-sizing: border-box;
 }
 
 body, html {
@@ -37,11 +33,9 @@ body, html {
 }
 
 body {
-	font-family: "ReplicaMonoLLTrialWeb-Regular", sans-serif;
+	font-family: "ReplicaMonoLLWeb-Regular", sans-serif;
 	font-size: 16px;
 	color: var(--color-fg-primary);
-	padding-left: 4em;
-	padding-top: 4em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -64,9 +58,22 @@ a:hover {
 }
 
 .wrapper {
-	width: 50vw;
-	margin-bottom: 4em;
+	width: 35vw;
+	padding: 4em;
+
+	@media (max-width: 1476px) {
+		width: 50vw;
+	}
+
+	  @media (max-width: 1280px) {
+		width: 100vw;
+	  }
 }
+
+/* MBP 16 */
+
+
+  
 
 .logo {
 	height: 18px;
