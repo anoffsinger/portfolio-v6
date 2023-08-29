@@ -36,10 +36,6 @@ body {
 	font-family: "ReplicaMonoLLWeb-Regular", sans-serif;
 	font-size: 16px;
 	color: var(--color-fg-primary);
-	
-	@media (max-width: 1280px) {
-		font-size: 20px;
-	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -64,21 +60,7 @@ a:hover {
 .wrapper {
 	width: 35vw;
 	padding: 4em;
-	
-	/* MBP 16 */
-	@media (max-width: 1476px) {
-		width: 50vw;
-	}
-
-	/* Air */
-	@media (max-width: 1280px) {
-		width: 100vw;
-		padding: 2em;
-	}
 }
-
-
-  
 
 .logo {
 	height: 18px;
@@ -115,4 +97,27 @@ a:hover {
 	font-size: 16px;
 	list-style: none;
 	margin-bottom: .4em;
+}
+
+@media (max-width: 1476px) {
+	.wrapper {
+		width: 50vw;
+	}
+}
+
+@media (max-width: 1100px) {
+	.wrapper {
+		width: 65vw;
+	}
+}
+
+@media (max-width: 820px) {
+	body {
+		font-size: 20px;
+	}
+
+	.wrapper {
+		width: 100vw;
+		padding: 2em;
+	}
 }
