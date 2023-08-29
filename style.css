@@ -99,6 +99,14 @@ a:hover {
 	margin-bottom: .4em;
 }
 
+.spline-viewer {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100vh;
+	height: 100vh;
+}
+
 @media (max-width: 1476px) {
 	.wrapper {
 		width: 50vw;
