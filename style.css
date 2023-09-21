@@ -14,13 +14,13 @@
 	--color-fg-secondary: #4d4d4d;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
 	:root {
 	  --color-bg: #ffffff;
 	  --color-fg-primary: #000000;
 	  --color-fg-secondary: #b8b8b8;
 	}
-  }
+  } */
 
 * {
     margin: 0;
