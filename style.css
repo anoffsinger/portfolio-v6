@@ -60,6 +60,20 @@ a:hover {
 .wrapper {
 	width: 35vw;
 	padding: 4em;
+	position: relative;
+	z-index: 2;
+}
+
+.wrapper::before {
+	z-index: -1;
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgb(0,0,0);
+	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
 }
 
 .logo {
@@ -102,9 +116,7 @@ a:hover {
 .spline-viewer {
 	position: fixed;
 	top: 0;
-	right: 0;
-	width: 100vh;
-	height: 100vh;
+	
 }
 
 @media (max-width: 1476px) {
