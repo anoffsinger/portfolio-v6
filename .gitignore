@@ -1,0 +1,11 @@
+# Dependencies
+/node_modules
+
+# Parcel build output
+/dist
+
+# Cache used by Parcel
+/.parcel-cache
+
+# OS generated files
+.DS_Store

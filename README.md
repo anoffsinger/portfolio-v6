@@ -1,0 +1,1 @@
+gitignore is configured
