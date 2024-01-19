@@ -1,7 +1,9 @@
 import { Application } from '@splinetool/runtime';
 
 // Initialize the Spline scene
-const canvas = document.getElementById('canvas3d');
+const canvas = document.getElementById('spline-player');
+const splineContainer = document.getElementById('spline-player-layout-container');
+const iconCloseSplineViewer = document.getElementById('icon-close-spline-viewer');
 
 const spline = new Application(canvas);
 spline
@@ -23,6 +25,16 @@ const camera5trigger = document.getElementById('camera-5');
 camera2trigger.addEventListener('mouseover', () => {
     const trigger1 = spline.findObjectById('ac3d557c-b130-4fda-9b35-db68243811a0');    
     trigger1.emitEvent('mouseDown');
+});
+
+camera2trigger.addEventListener('click', () => {
+    splineContainer.classList.add('spline-player-layout-container-visible');
+});
+
+iconCloseSplineViewer.addEventListener('click', () => {
+    splineContainer.classList.remove('spline-player-layout-container-visible');
+    const phone1 = spline.findObjectById('64f0f8e6-288b-42e8-9a64-42231eae56c4');
+    phone1.emitEvent('mouseDown');
 });
 
 camera2trigger.addEventListener('mouseout', () => {

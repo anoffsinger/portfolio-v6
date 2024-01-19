@@ -1,0 +1,15 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: .75em;
+    color: var(--color-text-secondary);
+}
+
+.footer-quote,
+.modal-updated {
+    font-family: "MonumentGrotesk-Italic";
+}
+
+.footer-details-button {
+    cursor: pointer;
+}

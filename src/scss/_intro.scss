@@ -1,0 +1,95 @@
+.section-intro {
+    margin-bottom: 2.5em;
+}
+
+.section-work,
+.section-side-projects,
+.section-writing,
+.section-patents,
+.section-elsewhere {
+    margin-bottom: 3em;
+}
+
+.section-header {
+    font: var(--numeric-font);
+    color: var(--color-fg-secondary);
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: .6em;
+}
+
+.section-intro-header {
+    font-size: 2.25em;
+    font-family: var(--headline-font);
+    margin-bottom: 32px;
+    color: var(--color-text-secondary);
+}
+
+.section-intro-header-callout {
+    color: var(--color-text-primary);
+}
+
+.section-intro p {
+    font-size: 1.125em;
+    margin-bottom: 24px;
+    color: var(--color-text-secondary);
+    line-height: 150%;
+}
+
+
+
+.section-item {
+    display: flex;
+    margin-bottom: .5em;
+}
+
+.section-item-left {
+    flex: 1;
+    display: flex;
+    font-size: 1.125em;
+    font-family: var(--headline-font);
+}
+
+.section-item-left-plain {
+    font-size: 1.125em;
+    font-family: var(--headline-font);
+}
+
+.section-item-left::after {
+    content: '';
+    border-bottom-width: 2px;
+    border-bottom-style: dotted;
+    border-bottom-color: rgba(255, 255, 255, .15);
+    margin-bottom: -3px;
+    flex: 1;
+    margin: 0 8px 3px 8px;
+}
+
+.section-item-right {
+    font-family: var(--numeric-font);
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    align-self: flex-end;
+    font-size: .875em;
+}
+
+.section-elsewhere ol {
+    list-style: none;
+}
+
+.section-item-right-patents {
+    font-family: var(--numeric-font);
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: end;
+}
+
+.section-item-right-patents span:first-of-type {
+    display: block;
+    color: var(--color-text-primary);
+}
+
+.section-item-right-patents span:last-of-type {
+    display: block;
+    color: var(--color-text-secondary);
+}

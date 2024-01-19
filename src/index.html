@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Hi, I'm Adam.</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./styles.scss">
 	<meta name="description" content="Hi, I'm Adam.">
 </head>
 
@@ -206,14 +206,18 @@
 			<span class="footer-details"><button id="open-modal-button">Colophon</button> • ©2024</span>
 		</footer>
 	</div>
-	<div class="content">
-		<div class="content-platter">
-			<canvas id="canvas3d"></canvas>
+	<div id="spline-player-layout-container">
+		<button id="icon-close-spline-viewer" class="icon-close">
+			<div></div>
+			<div></div>
+		</button>
+		<div class="spline-player-clipping-container">
+			<canvas id="spline-player"></canvas>
 		</div>
 	</div>
 	<div id="overlay"></div>
 	<div id="modal">
-		<button id="closeModalButton">
+		<button id="closeModalButton" class="icon-close">
 			<div></div>
 			<div></div>
 		</button>

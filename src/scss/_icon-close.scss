@@ -1,0 +1,30 @@
+.icon-close {
+    div {
+        width: 2.5px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    }
+
+    div:first-of-type {
+        transform: rotate(-45deg);
+        top: 2px;
+        left: 11px;
+    }
+
+    div:last-of-type {
+        transform: rotate(45deg);
+        top: 2px;
+        left: 11px;
+    }
+}
+
+#icon-close-spline-viewer {
+    
+    cursor: pointer;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 32px;
+    right: 32px;
+}
