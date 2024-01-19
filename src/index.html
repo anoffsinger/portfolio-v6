@@ -69,7 +69,7 @@
 			<p>Before Apple, I had an awesome stint at Cruise working on autonomous cars that was sadly cut short by the
 				pandemic. Before that, I made life-long friends at Dropbox and was an early designer at Uber, which was
 				a formative experience for me. When I’m not working, I’m building
-				<span id="camera-2" class="work-pill">
+				<span id="camera-5" class="work-pill">
 					<span class="inset-span">
 						<span class="work-pill-text">Found</span>
 						<svg class="work-pill-icon" width="17" height="11" viewBox="0 0 17 11" fill="none"
@@ -211,30 +211,38 @@
 			<div></div>
 			<div></div>
 		</button>
+
 		<div class="spline-player-clipping-container">
 			<canvas id="spline-player"></canvas>
 		</div>
-	</div>
-	<div id="overlay"></div>
-	<div id="modal">
-		<button id="closeModalButton" class="icon-close">
+		<span class="spline-player-label">
+			<span id="spline-player-label-title">Mt. Tamalpais</span>
 			<div></div>
-			<div></div>
-		</button>
-		<h2 class="modal-header">Colophon</h2>
-		<p class="modal-paragraph">This site is built using good, old-fashioned HTML, CSS, and Javascript. It integrates
-			with <a class="modal-link" href="">Spline</a>—a tool I adore—for 3D assets via the Spline Runtime API and is
-			bundled with <a class="modal-link" href="">Parcel</a>.
-		</p>
-		<p class="modal-paragraph">Headlines on this site are set in <a class="modal-link" href="">Replica</a>, body
-			text is set in <a class="modal-link" href="">Monument Grotesk</a>, and numbers are set in <a
-				class="modal-link" href="">Replica Mono</a>.
-		</p>
-		<p class="modal-paragraph">3D topographic data of Mt. Tamalpais State Park and surrounding Marin Country was
-			generated using <a class="modal-link" href="">Equator</a>.
-		</p>
-		<p class="modal-paragraph modal-updated">Site last updated January 1, 2024.</p>
+			<span id="spline-player-label-data">37.9236° N, 122.5965° W</span>
+		</span>
 	</div>
+	<div id="overlay">
+		<div id="modal">
+			<button id="close-modal-button" class="icon-close">
+				<div></div>
+				<div></div>
+			</button>
+			<h2 class="modal-header">Colophon</h2>
+			<p class="modal-paragraph">This site is built using good, old-fashioned HTML, CSS, and Javascript. It integrates
+				with <a class="modal-link" href="">Spline</a>—a tool I adore—for 3D assets via the Spline Runtime API and is
+				bundled with <a class="modal-link" href="">Parcel</a>.
+			</p>
+			<p class="modal-paragraph">Headlines on this site are set in <a class="modal-link" href="">Replica</a>, body
+				text is set in <a class="modal-link" href="">Monument Grotesk</a>, and numbers are set in <a
+					class="modal-link" href="">Replica Mono</a>.
+			</p>
+			<p class="modal-paragraph">3D topographic data of Mt. Tamalpais State Park and surrounding Marin Country was
+				generated using <a class="modal-link" href="">Equator</a>.
+			</p>
+			<p class="modal-paragraph modal-updated">Site last updated January 1, 2024.</p>
+		</div>
+	</div>
+	
 	<script type="module" src="spline.js"></script>
 	<script type="module" src="modal.js"></script>
 </body>

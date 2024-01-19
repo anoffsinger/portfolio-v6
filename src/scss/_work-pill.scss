@@ -1,5 +1,5 @@
 /* start with this next to get pill right https://www.youtube.com/watch?v=-VOUK-xFAyk */
- /* The only way to do this is going to be with psuedo elements */
+/* The only way to do this is going to be with psuedo elements */
 
 /* Like a variable, but can hold more information, supported in chrome, not Safari, I think */
 @property --gradient-angle {
@@ -8,7 +8,7 @@
     inherits: false;
 }
 
- .work-pill {
+.work-pill {
     /* text-decoration: underline; */
     color: var(--color-text-primary);
     cursor: url('images/Work\ Cursor.png'), auto;
@@ -17,7 +17,7 @@
     border-radius: 8px;
     position: relative;
     margin: 0 8px 0 5px;
-   display: inline-block;
+    display: inline-block;
 
 
 }
@@ -48,7 +48,7 @@
     top: 12px;
     left: 0px;
     right: -4px;
-    border-radius: 8px;
+    border-radius: 7px;
     z-index: 1;
     backdrop-filter: blur(10px);
 }
@@ -79,10 +79,12 @@
     margin-right: 1px;
     /* This is causing the line height distortion */
     font-size: 15px;
-    padding-left: 4px;
+    padding-left: 6px;
 }
 
 .work-pill-icon {
     position: relative;
     z-index: 2;
+    transform: translateY(0.5px);
+    margin-right: 1px;
 }

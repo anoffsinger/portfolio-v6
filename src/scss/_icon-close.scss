@@ -1,4 +1,10 @@
 .icon-close {
+
+    cursor: pointer;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+
     div {
         width: 2.5px;
     height: 20px;
@@ -19,12 +25,3 @@
     }
 }
 
-#icon-close-spline-viewer {
-    
-    cursor: pointer;
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 32px;
-    right: 32px;
-}
