@@ -2,24 +2,32 @@
 /* The only way to do this is going to be with psuedo elements */
 
 /* Like a variable, but can hold more information, supported in chrome, not Safari, I think */
+$randomDegree: random(360);
+
+// $color1: #1d1d1d;
+// $color2: #2b2b2b;
+// $color3: #ffffff;
+
+$color1: #292929;
+$color2: #454545;
+$color3: #9A9A9A;
+
+
 @property --gradient-angle {
+    
     syntax: "<angle>";
-    initial-value: 0deg;
+    initial-value: -15deg;
     inherits: false;
 }
 
 .work-pill {
-    /* text-decoration: underline; */
     color: var(--color-text-primary);
-    cursor: url('images/Work\ Cursor.png'), auto;
-
-    /* display: inline-block; */
+    // cursor: url('images/Work\ Cursor.png'), auto;
+    cursor: pointer;
     border-radius: 8px;
     position: relative;
     margin: 0 8px 0 5px;
     display: inline-block;
-
-
 }
 
 .work-pill::before,
@@ -27,18 +35,27 @@
     content: "";
     position: absolute;
     height: 24px;
-    /* inset: -3px; */
     border-radius: inherit;
     background: conic-gradient(from var(--gradient-angle),
-            var(--clr-1),
-            var(--clr-2),
-            var(--clr-3),
-            var(--clr-2),
-            var(--clr-1));
-    animation: rotation 20s linear infinite;
+            $color1,
+            $color2,
+            $color3,
+            $color2,
+            $color1);
     inset: 11px -5px 0 -1px;
-
+    opacity: .4;
+    transition: opacity .5s ease;
 }
+
+.work-pill:hover::after {
+ opacity: 1;   
+ animation: rotation 10s linear infinite;
+}
+
+.work-pill:hover::before {
+    opacity: 1;   
+    animation: rotation 10s linear infinite;
+   }
 
 .inset-span::after {
     content: "";
@@ -55,11 +72,11 @@
 
 @keyframes rotation {
     0% {
-        --gradient-angle: 0deg;
+        --gradient-angle: -15deg;
     }
 
     100% {
-        --gradient-angle: 360deg;
+        --gradient-angle: 345deg;
     }
 }
 
@@ -70,6 +87,7 @@
 
 .work-pill::after {
     box-shadow: 0px 5px 6px #00000073;
+
 }
 
 

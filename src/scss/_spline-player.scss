@@ -31,7 +31,6 @@
     overflow: hidden;
 
     @media (max-width: 820px) {
-        
         border-radius: 0;
     }
 }
@@ -52,6 +51,10 @@
         width: 4px;
         background-color: rgba($color: #ffffff, $alpha: 0.2);
         border-radius: 2px;
+    }
+
+    @media (max-width: 820px) {
+        transform: translateY(-76px);
     }
 }
 

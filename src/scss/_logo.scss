@@ -46,24 +46,24 @@
     transition: all 1s ease-out;
 }
 
-.logo:hover .circle {
-    background-color: #FFB6B6;
-}
+// .logo:hover .circle {
+//     background-color: #FFB6B6;
+// }
 
-.logo:hover .square {
-    transform: scaleX(1.3);
-    background-color: #F1B355;
-}
+// .logo:hover .square {
+//     transform: scaleX(1.3);
+//     background-color: #F1B355;
+// }
 
-.logo:hover .outer-triangle {
-    transform: rotate(90deg);
-    left: 49px;
-    top: -8px;
-}
+// .logo:hover .outer-triangle {
+//     transform: rotate(90deg);
+//     left: 49px;
+//     top: -8px;
+// }
 
-.logo:hover .outer-triangle .inner-triangle {
-    border-color: transparent transparent #FFF5D0 transparent;
-}
+// .logo:hover .outer-triangle .inner-triangle {
+//     border-color: transparent transparent #FFF5D0 transparent;
+// }
 
 .inner-triangle {
     border-style: solid;

@@ -33,10 +33,13 @@ camera2trigger.addEventListener('mouseover', () => {
     trigger1.emitEvent('mouseDown');
     splinePlayerLabelTitle.textContent = 'Patreon Podcast Player';
     splinePlayerLabelData.textContent = '2023';
+    console.log('hovered')
 });
 
 camera2trigger.addEventListener('click', () => {
+    // don't need to add trigger here for event, bcause hover is trigger on click on mobile
     splineContainer.classList.add('spline-player-layout-container-visible');
+    console.log('clicked')
 });
 
 camera2trigger.addEventListener('mouseout', () => {
@@ -53,6 +56,12 @@ camera3trigger.addEventListener('mouseover', () => {
     splinePlayerLabelData.textContent = '2022';
 });
 
+camera3trigger.addEventListener('click', () => {
+    // don't need to add trigger here for event, bcause hover is trigger on click on mobile
+    splineContainer.classList.add('spline-player-layout-container-visible');
+    console.log('clicked')
+});
+
 camera3trigger.addEventListener('mouseout', () => {
     const phone2 = spline.findObjectById('81a48018-18ce-48c0-bf3a-7fc79a32134a');
     phone2.emitEvent('mouseDown');
@@ -60,11 +69,18 @@ camera3trigger.addEventListener('mouseout', () => {
     splinePlayerLabelData.textContent = defaultPlayerData;
 });
 
+
 camera4trigger.addEventListener('mouseover', () => {
     const trigger3 = spline.findObjectById('69ef9026-2c2d-4d12-960d-15bf2d35be3b');
     trigger3.emitEvent('mouseDown');
     splinePlayerLabelTitle.textContent = 'Apple Savings';
     splinePlayerLabelData.textContent = '2022';
+});
+
+camera4trigger.addEventListener('click', () => {
+    // don't need to add trigger here for event, bcause hover is trigger on click on mobile
+    splineContainer.classList.add('spline-player-layout-container-visible');
+    console.log('clicked')
 });
 
 camera4trigger.addEventListener('mouseout', () => {
@@ -79,6 +95,12 @@ camera5trigger.addEventListener('mouseover', () => {
     trigger4.emitEvent('mouseDown');
     splinePlayerLabelTitle.textContent = 'Found Mobile App';
     splinePlayerLabelData.textContent = 'Ongoing';
+});
+
+camera5trigger.addEventListener('click', () => {
+    // don't need to add trigger here for event, bcause hover is trigger on click on mobile
+    splineContainer.classList.add('spline-player-layout-container-visible');
+    console.log('clicked')
 });
 
 camera5trigger.addEventListener('mouseout', () => {
