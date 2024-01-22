@@ -12,6 +12,8 @@
   },
   
   "scripts": {
+    "clean": "rm -rf .parcel-cache dist",
+    "start": "parcel serve src/index.html --public-url '/'",
     "build": "parcel build src/index.html --public-url '/portfolio-v6/'"
   }
 }
