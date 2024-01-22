@@ -12,6 +12,6 @@
   },
   
   "scripts": {
-    "build": "parcel build src/index.html --public-url '/'"
+    "build": "parcel build src/index.html --public-url '/portfolio-v6/'"
   }
 }
