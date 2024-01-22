@@ -315,7 +315,7 @@ button {
 .section-intro-header {
   font-size: 2.25em;
   font-family: var(--headline-font);
-  color: red;
+  color: var(--color-text-secondary);
   margin-bottom: 32px;
 }
 
