@@ -9,3 +9,5 @@ gitignore is configured
 Spline
 Layers must be visible to have their events triggered, but can have opacity 0
 uses code export feature to Vanilla JS
+
+Need to add steps to push dist to gh-pages
