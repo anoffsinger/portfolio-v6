@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@splinetool/runtime": "^1.0.16",
+    "gh-pages": "^6.1.1",
     "motion": "^10.17.0"
   },
   "devDependencies": {
@@ -10,8 +11,9 @@
     "process": "^0.11.10",
     "sass": "^1.70.0"
   },
-
   "scripts": {
-    "build": "parcel build src/index.html --public-url '/portfolio-v6'" // paths are built from this
+    "start": "parcel src/index.html",
+    "predeploy": "rm -rf dist && parcel build ./*.html --public-url https://github.com/anoffsinger/portfolio-v6",
+    "deploy": "gh-pages -d dist"
   }
 }
