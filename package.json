@@ -9,5 +9,9 @@
     "parcel": "^2.10.3",
     "process": "^0.11.10",
     "sass": "^1.70.0"
+  },
+
+  "scripts": {
+    "build": "parcel build src/index.html --public-url '/portfolio-v6/'"
   }
 }
