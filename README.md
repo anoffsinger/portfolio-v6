@@ -14,7 +14,7 @@ This repo contains two git repos within it. The main repo, at the root, is the f
 - Run `git push origin main:gh-pages --force` to overwrite `gh-pages`
 
 ## To Fix
-- Right now `dist` is being pushed to main branch of root
+- [] Removed `dist` from tracking, verify it doesn't get pushed to root again
 
 ## Spline
 - Layers must be visible to have their events triggered, but can have opacity 0
