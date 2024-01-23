@@ -1,17 +1,21 @@
-To run parcel and start localhost, while in directory run the following in terminal
-npx parcel src/index.html
+# About
+This repo contains two git repos within it. The main repo, at the root, is the full site. Within the `dist` folder, there is a separate repo, which is pushed to the `gh-pages` branch to deploy the site. Within `package.json` relative paths are configured for the dist build and local server context.
 
-To create a build (outlined in package.json)
-npm run build
+## To Serve Locally
+- `npm run clean` to remove current `dist` folder and parcel cache
+- `npm run start` to start server, which will rebuild the `dist`
 
-gitignore is configured
+## To Publish To Github Pages
+- At root, git add, commit, and push as you normally would to save work
+- Kill server if running via `ctrl + c`
+- Run `npm run build` at root to rebuild `dist` for production
+- `cd dist` 
+- `git add .` and `commit -m '[message]'` for new `dist` build
+- Run `git push origin main:gh-pages --force` to overwrite `gh-pages`
 
-Spline
-Layers must be visible to have their events triggered, but can have opacity 0
-uses code export feature to Vanilla JS
+## To Fix
+- Right now `dist` is being pushed to main branch of root
 
-To update gh-pages, and the live site moving forward:
-Finish work on main, commit and push
-Run npm run build at project root
-Go to dist folder and commit changes there (don't push)
-From root run git subtree push --prefix dist origin gh-pages
+## Spline
+- Layers must be visible to have their events triggered, but can have opacity 0
+- Uses code export feature to Vanilla JS
