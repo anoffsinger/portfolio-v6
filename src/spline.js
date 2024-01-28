@@ -25,6 +25,10 @@ const splinePlayerLabelData = document.getElementById('spline-player-label-data'
 const defaultPlayerTitle = "Mt. Tamalpais"
 const defaultPlayerData = "37.9236° N, 122.5965° W"
 
+function isTouchDevice() {
+    return ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
+}
+
 
 // When having issues with below, don't forget to clear cache and refresh
 
@@ -33,21 +37,25 @@ camera2trigger.addEventListener('mouseover', () => {
     trigger1.emitEvent('mouseDown');
     splinePlayerLabelTitle.textContent = 'Patreon Podcast Player';
     splinePlayerLabelData.textContent = '2023';
-    console.log('hovered')
+    console.log('hovered button')
+    
 });
 
 camera2trigger.addEventListener('click', () => {
     // don't need to add trigger here for event, bcause hover is trigger on click on mobile
     splineContainer.classList.add('spline-player-layout-container-visible');
-    console.log('clicked')
+    console.log('clicked button')
 });
 
-camera2trigger.addEventListener('mouseout', () => {
-    const phone1 = spline.findObjectById('64f0f8e6-288b-42e8-9a64-42231eae56c4');
-    phone1.emitEvent('mouseDown');
-    splinePlayerLabelTitle.textContent = defaultPlayerTitle;
-    splinePlayerLabelData.textContent = defaultPlayerData;
-});
+if (!isTouchDevice()) {
+    camera2trigger.addEventListener('mouseout', () => {
+        const phone1 = spline.findObjectById('64f0f8e6-288b-42e8-9a64-42231eae56c4');
+        phone1.emitEvent('mouseDown');
+        splinePlayerLabelTitle.textContent = defaultPlayerTitle;
+        splinePlayerLabelData.textContent = defaultPlayerData;
+        console.log('unhovered button')
+    });
+}
 
 camera3trigger.addEventListener('mouseover', () => {
     const trigger2 = spline.findObjectById('8c6d2594-4bc9-4340-a81f-22208c4d67a6');
@@ -62,12 +70,14 @@ camera3trigger.addEventListener('click', () => {
     console.log('clicked')
 });
 
-camera3trigger.addEventListener('mouseout', () => {
-    const phone2 = spline.findObjectById('81a48018-18ce-48c0-bf3a-7fc79a32134a');
-    phone2.emitEvent('mouseDown');
-    splinePlayerLabelTitle.textContent = defaultPlayerTitle;
-    splinePlayerLabelData.textContent = defaultPlayerData;
-});
+if (!isTouchDevice()) {
+    camera3trigger.addEventListener('mouseout', () => {
+        const phone2 = spline.findObjectById('81a48018-18ce-48c0-bf3a-7fc79a32134a');
+        phone2.emitEvent('mouseDown');
+        splinePlayerLabelTitle.textContent = defaultPlayerTitle;
+        splinePlayerLabelData.textContent = defaultPlayerData;
+    });
+}
 
 
 camera4trigger.addEventListener('mouseover', () => {
@@ -83,12 +93,14 @@ camera4trigger.addEventListener('click', () => {
     console.log('clicked')
 });
 
-camera4trigger.addEventListener('mouseout', () => {
-    const phone3 = spline.findObjectById('cfa2db79-49df-4bee-a563-64250d0229cc');
-    phone3.emitEvent('mouseDown');
-    splinePlayerLabelTitle.textContent = defaultPlayerTitle;
-    splinePlayerLabelData.textContent = defaultPlayerData;
-});
+if (!isTouchDevice()) {
+    camera4trigger.addEventListener('mouseout', () => {
+        const phone3 = spline.findObjectById('cfa2db79-49df-4bee-a563-64250d0229cc');
+        phone3.emitEvent('mouseDown');
+        splinePlayerLabelTitle.textContent = defaultPlayerTitle;
+        splinePlayerLabelData.textContent = defaultPlayerData;
+    });
+}
 
 camera5trigger.addEventListener('mouseover', () => {
     const trigger4 = spline.findObjectById('5179ac24-cdf5-4d3a-a8c0-b54ad526341a');
@@ -103,15 +115,18 @@ camera5trigger.addEventListener('click', () => {
     console.log('clicked')
 });
 
-camera5trigger.addEventListener('mouseout', () => {
-    const phone4 = spline.findObjectById('1797ff21-d009-4839-86dd-a5db4bcdad47');
-    phone4.emitEvent('mouseDown');
-    splinePlayerLabelTitle.textContent = defaultPlayerTitle;
-    splinePlayerLabelData.textContent = defaultPlayerData;
-});
+if (!isTouchDevice()) {
+    camera5trigger.addEventListener('mouseout', () => {
+        const phone4 = spline.findObjectById('1797ff21-d009-4839-86dd-a5db4bcdad47');
+        phone4.emitEvent('mouseDown');
+        splinePlayerLabelTitle.textContent = defaultPlayerTitle;
+        splinePlayerLabelData.textContent = defaultPlayerData;
+    });
+}
 
 iconCloseSplineViewer.addEventListener('click', () => {
     splineContainer.classList.remove('spline-player-layout-container-visible');
     const phone1 = spline.findObjectById('64f0f8e6-288b-42e8-9a64-42231eae56c4');
     phone1.emitEvent('mouseDown');
+    console.log('clicked close button')
 });
