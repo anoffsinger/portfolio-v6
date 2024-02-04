@@ -8,7 +8,7 @@ This repo contains two git repos within it. The main repo, at the root, is the f
 ## To Publish To Github Pages
 - At root, git add, commit, and push as you normally would to save work
 - Kill server if running via `ctrl + c`
-- Run `npm run build` at root to rebuild `dist` for production
+- Run `npm run build` (make sure you have run the `clean` command above) at root to rebuild `dist` for production
 - `cd dist` 
 - `git add .` and `commit -m '[message]'` for new `dist` build
 - Run `git push origin main:gh-pages --force` to overwrite `gh-pages`
