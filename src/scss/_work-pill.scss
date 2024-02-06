@@ -45,16 +45,25 @@ $color3: #9A9A9A;
     inset: 11px -5px 0 -1px;
     opacity: .4;
     transition: opacity .5s ease;
+    animation: rotation 15s linear infinite;
+
+    @media (max-width: 820px) {
+        
+        inset: 13px -5px 0 -1px;
+        height: 30px;
+        font-size: 19px;
+
+    }
 }
 
 .work-pill:hover::after {
- opacity: 1;   
- animation: rotation 10s linear infinite;
+ opacity: .8;   
+ 
 }
 
 .work-pill:hover::before {
-    opacity: 1;   
-    animation: rotation 10s linear infinite;
+    opacity: .8;   
+    
    }
 
 .inset-span::after {
@@ -68,6 +77,15 @@ $color3: #9A9A9A;
     border-radius: 7px;
     z-index: 1;
     backdrop-filter: blur(10px);
+
+    @media (max-width: 820px) {
+        
+        top: 14px;
+        height: 28px;
+
+    }
+
+    
 }
 
 @keyframes rotation {
@@ -98,6 +116,14 @@ $color3: #9A9A9A;
     /* This is causing the line height distortion */
     font-size: 15px;
     padding-left: 6px;
+
+    @media (max-width: 820px) {
+        
+        font-size: 19px;
+
+    }
+
+    
 }
 
 .work-pill-icon {

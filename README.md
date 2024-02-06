@@ -10,8 +10,9 @@ This repo contains two git repos within it. The main repo, at the root, is the f
 - Kill server if running via `ctrl + c`
 - Run `npm run build` (make sure you have run the `clean` command above) at root to rebuild `dist` for production
 - `cd dist` 
-- `git add .` and `commit -m '[message]'` for new `dist` build
+- `git add .` and `git commit -m '[message]'` for new `dist` build
 - Run `git push origin main:gh-pages --force` to overwrite `gh-pages`
+- Check to be sure custom domain name is still linked in settings
 
 ## To Fix
 - [] Removed `dist` from tracking, verify it doesn't get pushed to root again

@@ -37,14 +37,13 @@ camera2trigger.addEventListener('mouseover', () => {
     trigger1.emitEvent('mouseDown');
     splinePlayerLabelTitle.textContent = 'Patreon Podcast Player';
     splinePlayerLabelData.textContent = '2023';
-    console.log('hovered button')
     
 });
 
 camera2trigger.addEventListener('click', () => {
     // don't need to add trigger here for event, bcause hover is trigger on click on mobile
     splineContainer.classList.add('spline-player-layout-container-visible');
-    console.log('clicked button')
+    document.body.classList.add("no-scroll");
 });
 
 if (!isTouchDevice()) {
@@ -53,7 +52,6 @@ if (!isTouchDevice()) {
         phone1.emitEvent('mouseDown');
         splinePlayerLabelTitle.textContent = defaultPlayerTitle;
         splinePlayerLabelData.textContent = defaultPlayerData;
-        console.log('unhovered button')
     });
 }
 
@@ -67,7 +65,7 @@ camera3trigger.addEventListener('mouseover', () => {
 camera3trigger.addEventListener('click', () => {
     // don't need to add trigger here for event, bcause hover is trigger on click on mobile
     splineContainer.classList.add('spline-player-layout-container-visible');
-    console.log('clicked')
+    document.body.classList.add("no-scroll");
 });
 
 if (!isTouchDevice()) {
@@ -90,7 +88,7 @@ camera4trigger.addEventListener('mouseover', () => {
 camera4trigger.addEventListener('click', () => {
     // don't need to add trigger here for event, bcause hover is trigger on click on mobile
     splineContainer.classList.add('spline-player-layout-container-visible');
-    console.log('clicked')
+    document.body.classList.add("no-scroll");
 });
 
 if (!isTouchDevice()) {
@@ -112,7 +110,7 @@ camera5trigger.addEventListener('mouseover', () => {
 camera5trigger.addEventListener('click', () => {
     // don't need to add trigger here for event, bcause hover is trigger on click on mobile
     splineContainer.classList.add('spline-player-layout-container-visible');
-    console.log('clicked')
+    document.body.classList.add("no-scroll");
 });
 
 if (!isTouchDevice()) {
@@ -128,5 +126,6 @@ iconCloseSplineViewer.addEventListener('click', () => {
     splineContainer.classList.remove('spline-player-layout-container-visible');
     const phone1 = spline.findObjectById('64f0f8e6-288b-42e8-9a64-42231eae56c4');
     phone1.emitEvent('mouseDown');
+    document.body.classList.remove("no-scroll");
     console.log('clicked close button')
 });

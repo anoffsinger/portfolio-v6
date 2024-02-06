@@ -2,6 +2,10 @@
     margin-bottom: 3em;
     position: relative;
     height: 24px;
+
+    @media (max-width: 820px) {
+        margin-bottom: 40px;
+    }
 }
 
 .circle {
