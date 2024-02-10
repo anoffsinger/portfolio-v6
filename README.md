@@ -12,11 +12,9 @@ This repo contains two git repos within it. The main repo, at the root, is the f
 - `cd dist` 
 - `git add .` and `git commit -m '[message]'` for new `dist` build
 - Run `git push origin main:gh-pages --force` to overwrite `gh-pages`
-- Check to be sure custom domain name is still linked in settings
-
-## To Fix
-- [] Removed `dist` from tracking, verify it doesn't get pushed to root again
+- Check to be sure custom domain name is still linked in github settings
 
 ## Spline
 - Layers must be visible to have their events triggered, but can have opacity 0
 - Uses code export feature to Vanilla JS
+- Phone animations are controlled from UI 1 phone container float layer
