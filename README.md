@@ -12,7 +12,7 @@ This repo contains two git repos within it. The main repo, at the root, is the f
 - `cd dist` 
 - `git add .` and `git commit -m '[message]'` for new `dist` build
 - Run `git push origin main:gh-pages --force` to overwrite `gh-pages`
-- Check to be sure custom domain name is still linked in github settings
+- Check to be sure custom domain name is still linked in github settings, add `noff.me` if not
 
 ## Spline
 - Layers must be visible to have their events triggered, but can have opacity 0
