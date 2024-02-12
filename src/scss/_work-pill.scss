@@ -56,6 +56,22 @@ $color3: #9A9A9A;
     }
 }
 
+.work-pill::before {
+    filter: blur(8px);
+    // inset: 50px -5px 0 -1px;
+    
+}
+
+@keyframes rotation {
+    0% {
+        --gradient-angle: -15deg;
+    }
+
+    100% {
+        --gradient-angle: 345deg;
+    }
+}
+
 .work-pill:hover::after {
  opacity: .8;   
  
@@ -65,6 +81,10 @@ $color3: #9A9A9A;
     opacity: .8;   
     
    }
+
+.inset-span {
+    overflow: visible;
+}
 
 .inset-span::after {
     content: "";
@@ -88,23 +108,11 @@ $color3: #9A9A9A;
     
 }
 
-@keyframes rotation {
-    0% {
-        --gradient-angle: -15deg;
-    }
 
-    100% {
-        --gradient-angle: 345deg;
-    }
-}
-
-.work-pill::before {
-    filter: blur(8px);
-    /* opacity: 0.9; */
-}
 
 .work-pill::after {
-    box-shadow: 0px 5px 6px #00000073;
+    // This is causing safari clipping bug
+    // box-shadow: 0px 5px 6px #00000073;
 
 }
 

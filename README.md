@@ -1,5 +1,5 @@
 # About
-This repo contains two git repos within it. The main repo, at the root, is the full site. Within the `dist` folder, there is a separate repo, which is pushed to the `gh-pages` branch to deploy the site. Within `package.json` relative paths are configured for the dist build and local server context.
+This repo contains two git repos within it. The main repo, at the root, is the full site. Within the `dist` folder, there is a separate repo, which is pushed to the `gh-pages` branch to deploy the site. Within `package.json` relative paths are configured for the dist build and local server context. The `npm run build` step also uses Copy Files to push images into dist for OG tags, because they are not referenced relative, but directly, this cause Parcel to not correctly bundle them.
 
 ## To Serve Locally
 - `npm run clean` to remove current `dist` folder and parcel cache

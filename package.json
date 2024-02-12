@@ -14,6 +14,6 @@
   "scripts": {
     "clean": "rm -rf .parcel-cache && rm -rf dist/*",
     "start": "parcel serve src/index.html --public-url '/'",
-    "build": "parcel build src/index.html --public-url '/' && copyfiles -u 1 src/images/* dist/images"
+    "build": "parcel build src/index.html --public-url '/' && copyfiles -u 1 src/images/* dist"
   }
 }
