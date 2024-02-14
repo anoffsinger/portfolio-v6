@@ -1,3 +1,15 @@
+// Replica Bold
+@font-face {
+    font-family: "ReplicaLLWeb-Bold";
+    src: url("fonts/ReplicaLLWeb-Bold.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "ReplicaLLWeb-Bold";
+    src: url("fonts/ReplicaLLWeb-Bold.woff2") format("woff2");
+  }
+
+// Replica Mono
 @font-face {
     font-family: "ReplicaMonoLLWeb-Regular";
     src: url("fonts/ReplicaMonoLLWeb-Regular.woff") format("woff");
@@ -8,32 +20,35 @@
     src: url("fonts/ReplicaMonoLLWeb-Regular.woff2") format("woff2");
 }
 
+// Monument Regular
 @font-face {
-    font-family: "ReplicaPro-Bold";
-    src: url("fonts/ReplicaPro-Bold.woff") format("woff");
-}
-
-@font-face {
-    font-family: "ReplicaPro-Bold";
-    src: url("fonts/ReplicaPro-Bold.woff2") format("woff2");
+    font-family: "MonumentGrotesk";
+    src: url("fonts/ABCMonumentGrotesk-Regular.woff") format("woff");
 }
 
 @font-face {
     font-family: "MonumentGrotesk";
-    src: url("fonts/MonumentGrotesk-Regular.woff") format("woff");
+    src: url("fonts/ABCMonumentGrotesk-Regular.woff2") format("woff2");
 }
 
+// Monument Regular Italic
 @font-face {
-    font-family: "MonumentGrotesk";
-    src: url("fonts/MonumentGrotesk-Regular.woff2") format("woff2");
+    font-family: "MonumentGrotesk-Italic";
+    src: url("fonts/ABCMonumentGrotesk-RegularItalic.woff") format("woff");
 }
 
 @font-face {
     font-family: "MonumentGrotesk-Italic";
-    src: url("fonts/MonumentGrotesk-Italic.woff") format("woff");
+    src: url("fonts/ABCMonumentGrotesk-RegularItalic.woff2") format("woff2");
+}
+
+// Monument Medium
+@font-face {
+    font-family: "MonumentGroteskMedium";
+    src: url("fonts/ABCMonumentGrotesk-Medium.woff") format("woff");
 }
 
 @font-face {
-    font-family: "MonumentGrotesk-Italic";
-    src: url("fonts/MonumentGrotesk-Italic.woff2") format("woff2");
+    font-family: "MonumentGroteskMedium";
+    src: url("fonts/ABCMonumentGrotesk-Medium.woff2") format("woff2");
 }

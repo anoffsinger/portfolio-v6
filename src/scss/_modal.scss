@@ -55,14 +55,16 @@
     font-family: "MonumentGrotesk-Italic";
 }
 
-.modal-link,
+.modal-link {
+    color: white;
+    font-family: "MonumentGroteskMedium";;
+}
+
 #open-modal-button {
     color: white;
     text-decoration: underline;
     text-decoration-style: dotted;
-    /* Dotted underline */
     text-decoration-thickness: 2px;
-    /* Thin line */
     text-decoration-color: rgba(255, 255, 255, 0.6);
     text-underline-offset: 3px;
 
