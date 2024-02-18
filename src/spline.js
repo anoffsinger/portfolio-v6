@@ -44,7 +44,7 @@ camera2trigger.addEventListener('click', () => {
     // don't need to add trigger here for event, bcause hover is trigger on click on mobile
     document.body.classList.add("no-scroll");
     splineContainer.classList.add('spline-player-layout-container-visible');
-    
+    document.addEventListener('touchmove', preventScrollOnBody, { passive: false });
 });
 
 if (!isTouchDevice()) {
@@ -131,4 +131,9 @@ iconCloseSplineViewer.addEventListener('click', () => {
     splineContainer.classList.remove('spline-player-layout-container-visible');
     const phone1 = spline.findObjectById('64f0f8e6-288b-42e8-9a64-42231eae56c4');
     phone1.emitEvent('mouseDown');
+    document.removeEventListener('touchmove', preventScrollOnBody, { passive: false });
 });
+
+function preventScrollOnBody(e) {
+    e.preventDefault();
+}
