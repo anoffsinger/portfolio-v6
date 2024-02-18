@@ -16,12 +16,14 @@
         bottom: 0;
         width: 100%;
         display: none;
+        pointer-events: auto;
     }
 
 }
 
 .spline-player-layout-container-visible {
     display: block !important; 
+    pointer-events: auto;
 }
 
 .spline-player-clipping-container {
