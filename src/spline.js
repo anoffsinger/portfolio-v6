@@ -42,8 +42,8 @@ camera2trigger.addEventListener('mouseover', () => {
 
 camera2trigger.addEventListener('click', () => {
     // don't need to add trigger here for event, bcause hover is trigger on click on mobile
-    document.body.classList.add("no-scroll");
     splineContainer.classList.add('spline-player-layout-container-visible');
+    document.body.classList.add("no-scroll");
     document.addEventListener('touchmove', preventScrollOnBody, { passive: false });
 });
 
@@ -65,8 +65,8 @@ camera3trigger.addEventListener('mouseover', () => {
 
 camera3trigger.addEventListener('click', () => {
     // don't need to add trigger here for event, bcause hover is trigger on click on mobile
-    document.body.classList.add("no-scroll");
     splineContainer.classList.add('spline-player-layout-container-visible');
+    document.body.classList.add("no-scroll");
     document.addEventListener('touchmove', preventScrollOnBody, { passive: false });
 });
 
@@ -89,8 +89,8 @@ camera4trigger.addEventListener('mouseover', () => {
 
 camera4trigger.addEventListener('click', () => {
     // don't need to add trigger here for event, bcause hover is trigger on click on mobile
-    document.body.classList.add("no-scroll");
     splineContainer.classList.add('spline-player-layout-container-visible');
+    document.body.classList.add("no-scroll");
     document.addEventListener('touchmove', preventScrollOnBody, { passive: false });
 });
 
@@ -112,8 +112,8 @@ camera5trigger.addEventListener('mouseover', () => {
 
 camera5trigger.addEventListener('click', () => {
     // don't need to add trigger here for event, bcause hover is trigger on click on mobile
-    document.body.classList.add("no-scroll");
     splineContainer.classList.add('spline-player-layout-container-visible');
+    document.body.classList.add("no-scroll");
     document.addEventListener('touchmove', preventScrollOnBody, { passive: false });
 });
 
@@ -127,10 +127,10 @@ if (!isTouchDevice()) {
 }
 
 iconCloseSplineViewer.addEventListener('click', () => {
-    document.body.classList.remove("no-scroll");
     splineContainer.classList.remove('spline-player-layout-container-visible');
     const phone1 = spline.findObjectById('64f0f8e6-288b-42e8-9a64-42231eae56c4');
     phone1.emitEvent('mouseDown');
+    document.body.classList.remove("no-scroll");
     document.removeEventListener('touchmove', preventScrollOnBody, { passive: false });
 });
 
