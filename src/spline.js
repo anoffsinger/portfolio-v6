@@ -67,7 +67,7 @@ camera3trigger.addEventListener('click', () => {
     // don't need to add trigger here for event, bcause hover is trigger on click on mobile
     document.body.classList.add("no-scroll");
     splineContainer.classList.add('spline-player-layout-container-visible');
-    
+    document.addEventListener('touchmove', preventScrollOnBody, { passive: false });
 });
 
 if (!isTouchDevice()) {
@@ -91,7 +91,7 @@ camera4trigger.addEventListener('click', () => {
     // don't need to add trigger here for event, bcause hover is trigger on click on mobile
     document.body.classList.add("no-scroll");
     splineContainer.classList.add('spline-player-layout-container-visible');
-    
+    document.addEventListener('touchmove', preventScrollOnBody, { passive: false });
 });
 
 if (!isTouchDevice()) {
@@ -114,7 +114,7 @@ camera5trigger.addEventListener('click', () => {
     // don't need to add trigger here for event, bcause hover is trigger on click on mobile
     document.body.classList.add("no-scroll");
     splineContainer.classList.add('spline-player-layout-container-visible');
-    
+    document.addEventListener('touchmove', preventScrollOnBody, { passive: false });
 });
 
 if (!isTouchDevice()) {
