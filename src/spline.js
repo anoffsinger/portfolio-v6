@@ -41,10 +41,12 @@ camera2trigger.addEventListener('mouseover', () => {
 });
 
 camera2trigger.addEventListener('click', () => {
-    // don't need to add trigger here for event, bcause hover is trigger on click on mobile
-    splineContainer.classList.add('spline-player-layout-container-visible');
-    document.body.classList.add("no-scroll");
-    document.addEventListener('touchmove', preventScrollOnBody, { passive: false });
+    if (isTouchDevice()) {
+        // don't need to add trigger here for event, bcause hover is trigger on click on mobile
+        splineContainer.classList.add('spline-player-layout-container-visible');
+        document.body.classList.add("no-scroll");
+        document.addEventListener('touchmove', preventScrollOnBody, { passive: false });
+    }
 });
 
 if (!isTouchDevice()) {
@@ -53,6 +55,7 @@ if (!isTouchDevice()) {
         phone1.emitEvent('mouseDown');
         splinePlayerLabelTitle.textContent = defaultPlayerTitle;
         splinePlayerLabelData.textContent = defaultPlayerData;
+        document.removeEventListener('touchmove', preventScrollOnBody, { passive: false });
     });
 }
 
@@ -64,10 +67,12 @@ camera3trigger.addEventListener('mouseover', () => {
 });
 
 camera3trigger.addEventListener('click', () => {
-    // don't need to add trigger here for event, bcause hover is trigger on click on mobile
-    splineContainer.classList.add('spline-player-layout-container-visible');
-    document.body.classList.add("no-scroll");
-    document.addEventListener('touchmove', preventScrollOnBody, { passive: false });
+    if (isTouchDevice()) {
+        // don't need to add trigger here for event, bcause hover is trigger on click on mobile
+        splineContainer.classList.add('spline-player-layout-container-visible');
+        document.body.classList.add("no-scroll");
+        document.addEventListener('touchmove', preventScrollOnBody, { passive: false });
+    }
 });
 
 if (!isTouchDevice()) {
@@ -76,6 +81,7 @@ if (!isTouchDevice()) {
         phone2.emitEvent('mouseDown');
         splinePlayerLabelTitle.textContent = defaultPlayerTitle;
         splinePlayerLabelData.textContent = defaultPlayerData;
+        document.removeEventListener('touchmove', preventScrollOnBody, { passive: false });
     });
 }
 
@@ -88,10 +94,12 @@ camera4trigger.addEventListener('mouseover', () => {
 });
 
 camera4trigger.addEventListener('click', () => {
-    // don't need to add trigger here for event, bcause hover is trigger on click on mobile
-    splineContainer.classList.add('spline-player-layout-container-visible');
-    document.body.classList.add("no-scroll");
-    document.addEventListener('touchmove', preventScrollOnBody, { passive: false });
+    if (isTouchDevice()) {
+        // don't need to add trigger here for event, bcause hover is trigger on click on mobile
+        splineContainer.classList.add('spline-player-layout-container-visible');
+        document.body.classList.add("no-scroll");
+        document.addEventListener('touchmove', preventScrollOnBody, { passive: false });
+    }
 });
 
 if (!isTouchDevice()) {
@@ -100,6 +108,7 @@ if (!isTouchDevice()) {
         phone3.emitEvent('mouseDown');
         splinePlayerLabelTitle.textContent = defaultPlayerTitle;
         splinePlayerLabelData.textContent = defaultPlayerData;
+        document.removeEventListener('touchmove', preventScrollOnBody, { passive: false });
     });
 }
 
@@ -111,10 +120,12 @@ camera5trigger.addEventListener('mouseover', () => {
 });
 
 camera5trigger.addEventListener('click', () => {
-    // don't need to add trigger here for event, bcause hover is trigger on click on mobile
-    splineContainer.classList.add('spline-player-layout-container-visible');
-    document.body.classList.add("no-scroll");
-    document.addEventListener('touchmove', preventScrollOnBody, { passive: false });
+    if (isTouchDevice()) {
+        // don't need to add trigger here for event, bcause hover is trigger on click on mobile
+        splineContainer.classList.add('spline-player-layout-container-visible');
+        document.body.classList.add("no-scroll");
+        document.addEventListener('touchmove', preventScrollOnBody, { passive: false });
+    }
 });
 
 if (!isTouchDevice()) {
@@ -123,6 +134,7 @@ if (!isTouchDevice()) {
         phone4.emitEvent('mouseDown');
         splinePlayerLabelTitle.textContent = defaultPlayerTitle;
         splinePlayerLabelData.textContent = defaultPlayerData;
+        document.removeEventListener('touchmove', preventScrollOnBody, { passive: false });
     });
 }
 

@@ -1,28 +1,28 @@
-/* start with this next to get pill right https://www.youtube.com/watch?v=-VOUK-xFAyk */
-/* The only way to do this is going to be with psuedo elements */
-
-/* Like a variable, but can hold more information, supported in chrome, not Safari, I think */
-$randomDegree: random(360);
-
-// $color1: #1d1d1d;
-// $color2: #2b2b2b;
-// $color3: #ffffff;
+/* Adapted from https://www.youtube.com/watch?v=-VOUK-xFAyk */
 
 $color1: #292929;
 $color2: #454545;
 $color3: #9A9A9A;
 
-
+// From houdini spec
 @property --gradient-angle {
-    
     syntax: "<angle>";
     initial-value: -15deg;
     inherits: false;
 }
 
+@keyframes rotation {
+    0% {
+        --gradient-angle: -15deg;
+    }
+
+    100% {
+        --gradient-angle: 345deg;
+    }
+}
+
 .work-pill {
     color: var(--color-text-primary);
-    // cursor: url('images/Work\ Cursor.png'), auto;
     cursor: pointer;
     border-radius: 8px;
     position: relative;
@@ -46,41 +46,22 @@ $color3: #9A9A9A;
     opacity: .4;
     transition: opacity .5s ease;
     animation: rotation 15s linear infinite;
-
-    @media (max-width: 820px) {
-        
+    
+    @media (max-width: 820px) {    
         inset: 13px -5px 0 -1px;
         height: 30px;
         font-size: 19px;
-
     }
 }
 
 .work-pill::before {
-    filter: blur(8px);
-    // inset: 50px -5px 0 -1px;
-    
+    filter: blur(4px); // If I could just disable this rule for Safari, I'd be happy
+    transform: translate3d(0, 0, 0); // This solves hover color flash
 }
 
-@keyframes rotation {
-    0% {
-        --gradient-angle: -15deg;
-    }
-
-    100% {
-        --gradient-angle: 345deg;
-    }
-}
-
-.work-pill:hover::after {
+.work-pill:hover::after, .work-pill:hover::before {
  opacity: .8;   
- 
 }
-
-.work-pill:hover::before {
-    opacity: .8;   
-    
-   }
 
 .inset-span {
     overflow: visible;
@@ -99,40 +80,22 @@ $color3: #9A9A9A;
     backdrop-filter: blur(10px);
 
     @media (max-width: 820px) {
-        
         top: 14px;
         height: 28px;
-
     }
-
-    
 }
-
-
-
-.work-pill::after {
-    // This is causing safari clipping bug
-    // box-shadow: 0px 5px 6px #00000073;
-
-}
-
 
 .work-pill-text {
     position: relative;
     z-index: 2;
     margin-right: 1px;
-    /* This is causing the line height distortion */
-    font-size: 15px;
+    font-size: 15px; // This is causing the line height distortion
     padding-left: 6px;
     font-family: "MonumentGroteskMedium";
 
     @media (max-width: 820px) {
-        
         font-size: 19px;
-
     }
-
-    
 }
 
 .work-pill-icon {
