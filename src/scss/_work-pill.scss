@@ -59,6 +59,11 @@ $color3: #9A9A9A;
     transform: translate3d(0, 0, 0); // This solves hover color flash
 }
 
+.safari-desktop.work-pill::before {
+    filter: none; /* Reset or override styles for Safari on desktop */
+    transform: translate3d(0, 0, 0); // This solves hover color flash
+}
+
 .work-pill:hover::after, .work-pill:hover::before {
  opacity: .8;   
 }
