@@ -30,9 +30,9 @@ openModalButton.addEventListener('click', () => {
         },
         {
             easing: spring({
-                stiffness: 50,
-                damping: 8,
-                mass: 0.8
+                stiffness: 65,
+                damping: 12,
+                mass: 1
             })
         });
 });
@@ -48,9 +48,9 @@ function closeAnimation() {
         },
         {
             easing: spring({
-                stiffness: 50,
-                damping: 8,
-                mass: 0.8
+                stiffness: 65,
+                damping: 12,
+                mass: 1
             })
         });
     animate(

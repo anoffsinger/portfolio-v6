@@ -1,13 +1,8 @@
-/* Modal */
 #modal {
-    // visibility: hidden;
     margin-top: 200px;
     opacity: 0;
-    
-    
     width: 400px;
     z-index: 4;
-    
     border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     background: #101010;
@@ -29,14 +24,6 @@
     right: 32px;
 }
 
-/* Class to make elements visible */
-// .modal-visible {
-//     display: block !important;
-//     top: 50% !important;
-//     visibility: visible !important;
-//     opacity: 1 !important;
-// }
-
 .modal-header {
     font-size: 28px;
     font-family: var(--headline-font);
@@ -45,14 +32,15 @@
 }
 
 .modal-paragraph {
-    font-size: 0.875em;
+    font-size: 14px;
     color: var(--color-text-secondary);
-    margin-bottom: 16px;
-    line-height: 150%;
+    margin-bottom: 12px;
+    line-height: 160%;
 }
 
 .modal-updated {
     font-family: "MonumentGrotesk-Italic";
+    margin-bottom: 0;
 }
 
 .modal-link {
@@ -67,8 +55,4 @@
     text-decoration-thickness: 2px;
     text-decoration-color: rgba(255, 255, 255, 0.6);
     text-underline-offset: 3px;
-
 }
-
-
-

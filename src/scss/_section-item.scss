@@ -17,6 +17,10 @@
 .section-item-left-plain {
     font-size: 18px;
     font-family: var(--headline-font);
+
+    @media (max-width: 820px) {
+        font-size: 22px;
+    }
 }
 
 .section-item-left::after {
