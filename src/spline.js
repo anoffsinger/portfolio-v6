@@ -18,6 +18,7 @@ const camera2trigger = document.getElementById('camera-2');
 const camera3trigger = document.getElementById('camera-3');
 const camera4trigger = document.getElementById('camera-4');
 const camera5trigger = document.getElementById('camera-5');
+const camera6trigger = document.getElementById('camera-6');
 
 const splinePlayerLabelTitle = document.getElementById('spline-player-label-title');
 const splinePlayerLabelData = document.getElementById('spline-player-label-data');
@@ -132,6 +133,35 @@ if (!isTouchDevice()) {
     camera5trigger.addEventListener('mouseout', () => {
         const phone4 = spline.findObjectById('1797ff21-d009-4839-86dd-a5db4bcdad47');
         phone4.emitEvent('mouseDown');
+        splinePlayerLabelTitle.textContent = defaultPlayerTitle;
+        splinePlayerLabelData.textContent = defaultPlayerData;
+        document.removeEventListener('touchmove', preventScrollOnBody, { passive: false });
+    });
+}
+
+camera6trigger.addEventListener('mouseover', () => {
+    // Right click on 'animation trigger #' object in spline and get development ID
+    const trigger5 = spline.findObjectById('8f8ab77c-c43e-486b-b043-dcefa7aa95d7');
+    trigger5.emitEvent('mouseDown');
+    splinePlayerLabelTitle.textContent = 'Alma';
+    splinePlayerLabelData.textContent = 'Ongoing';
+    
+});
+
+camera6trigger.addEventListener('click', () => {
+    if (isTouchDevice()) {
+        // don't need to add trigger here for event, because hover is trigger on click on mobile
+        splineContainer.classList.add('spline-player-layout-container-visible');
+        document.body.classList.add("no-scroll");
+        document.addEventListener('touchmove', preventScrollOnBody, { passive: false });
+    }
+});
+
+if (!isTouchDevice()) {
+    camera6trigger.addEventListener('mouseout', () => {
+        // Right click on 'phone #' object in spline and get development ID
+        const phone5 = spline.findObjectById('ce360629-7c88-42f5-aa77-00690062299c'); 
+        phone5.emitEvent('mouseDown');
         splinePlayerLabelTitle.textContent = defaultPlayerTitle;
         splinePlayerLabelData.textContent = defaultPlayerData;
         document.removeEventListener('touchmove', preventScrollOnBody, { passive: false });

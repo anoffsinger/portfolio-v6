@@ -22,6 +22,11 @@ This repo contains two git repos within it. The main repo, at the root, is the f
 - Note, filepaths from index might be messed up if not serving to custom url
 
 ## Spline
-- Layers must be visible to have their events triggered, but can have opacity 0
-- Uses code export feature to Vanilla JS
-- Phone animations are controlled from UI 1 phone container float layer
+- When you want to add new UI to spline, you first duplicate the "UI #" group
+- Then duplicate 'Animation Trigger #' 
+- In spline.js, create a new set of the trigger functions
+- Update the development IDs for both the animation trigger and for the phone UI
+- When finished, export > code export > vanilla JS > push big cta
+- General notes
+    - Layers must be visible to have their events triggered, but can have opacity 0
+    - Phone animations are controlled from UI 1 phone container float layer (not sure what this note was for?)

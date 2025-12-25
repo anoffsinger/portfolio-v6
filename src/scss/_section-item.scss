@@ -61,3 +61,11 @@
     display: block;
     color: var(--color-text-secondary);
 }
+
+.section-item-subline {
+    font-family: var(--numeric-font);
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    display: block;
+}
